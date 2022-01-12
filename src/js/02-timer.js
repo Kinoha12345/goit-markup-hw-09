@@ -10,7 +10,7 @@ const options = {
     onClose(selectedDates) {
       const time1 = selectedDates[0].getTime();
       if(time1 < Date.now()){
-        alert("Please choose a date in the future");
+        return alert("Please choose a date in the future");
       }
       refs.start.disabled = true;
       startTimer(time1);
